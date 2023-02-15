@@ -1,0 +1,190 @@
+html {
+  background-color: #E0E1DD;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+nav {
+  display: flex;
+  background-color: #0d1b2a;
+  justify-content: space-between;
+}
+
+#logo {
+  width: 120px;
+
+}
+
+ul {
+
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  margin: auto;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: all .5s ease;
+}
+
+li a:hover {
+  background-color: #111;
+  box-shadow: 0 0 10px #e0e1dd;
+}
+
+
+
+/*Referencies*/
+#referencia {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  margin: auto;
+}
+.content{
+  display: flex;
+  flex-direction: row;
+}
+.content img{
+padding: 10px;
+}
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row>.column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+.column h3{
+  width: 300px;
+}
+.column p{
+  width: 300px;
+}
+
+
+
+/* Clear floats after rows */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: #E0E1DD;
+  padding: 10px;
+}
+
+
+section {
+  width: 1000px;
+  margin: auto;
+  display: grid;
+  grid-template-areas: "h h h"
+    "p i i"
+    "p i i";
+}
+
+.indexh2 {
+  grid-area: h;
+}
+
+.indexp {
+  grid-area: p;
+}
+
+.indeximg {
+  grid-area: i;
+}
+
+footer {
+  background-color: #0d1b2a;
+  color: #e0e1dd;
+}
+
+#footerdiv {
+  display: grid;
+  margin: auto;
+  width: 1000px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.szoveg {
+  grid-area: 1 / 1 / 4 / 2;
+  ;
+}
+
+.terkep {
+  grid-area: t;
+  grid-area: 1 / 2 / 4 / 3;
+}
+
+#mainpic{
+  display: grid;
+  grid-template-areas: "i p"
+                       "i p";
+}
+
+#mainpic img{
+  width: 600px;
+  grid-area: i;
+}
+
+#mainpic p{
+  text-align: justify;
+  font-size:xx-large;
+  grid-area: p;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
